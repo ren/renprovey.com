@@ -1,0 +1,21 @@
+---
+layout: default
+title: Git
+categories: git
+published: true
+---
+
+<section class="callout">
+  <h1>Git Log</h1>
+
+  <p>
+    <code>$ git log --since="5 hours"</code> &mdash; commits in the last 5 hours<br/>
+    <code>$ git log --before="5 hours"</code> &mdash; without commits from the last 5 hours<br/>
+    <code>$ git log &lt;commit marker&gt;..&lt;commit marker&gt;</code> &mdash; log for a commit range<br/>
+    <code>$ git log &lt;commit marker&gt;^</code> &mdash; a caret acts like a minus one, you can use multiple carets.<br/>
+    <code>$ git log &lt;commit marker&gt;~2</code> &mdash; two revisions prior to what the hash or tag specifies.<br/>
+    <code>$ git log --pretty=oneline &lt;commit marker&gt;..&lt;commit marker&gt;</code> &mdash; a nice way to tighten up the log output.
+  </p>  
+  
+  <a href="{{ page.url }}" class="permalink">{{ page.date | date: "%B %d %Y" }}</a>
+</section>
