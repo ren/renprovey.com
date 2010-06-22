@@ -1,5 +1,5 @@
 destination: ./_site
-exclude: [.git, .gitignore]
+exclude: [.git, .gitignore, CNAME]
 auto:        true
 lsi:         false
 pygments:    false
