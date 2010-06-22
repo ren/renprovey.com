@@ -1,4 +1,5 @@
 destination: ./_site
+exclude: [.git, .gitignore]
 auto:        true
 lsi:         false
 pygments:    false
@@ -9,6 +10,6 @@ maruku:
   use_divs:   false
   png_dir:    images/latex
   png_url:    /images/latex
-permalink: pretty
+permalink: /blog/:year/:month/:day/:title	
 
 title: "Ren Provey"
