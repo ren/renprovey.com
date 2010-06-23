@@ -24,17 +24,25 @@ b {
 	-webkit-border-radius: 1px 2px;
 }
 
-.title { font-style:italic; }
+code {
+	background-color:#EBE7F3;
+	white-space: nowrap;
+}
+
+p {
+  font-size:1em;
+  margin: 1.5em 0;
+}
+
+.block { display:block; }
+.book-title { font-style:italic; }
+.no-break { white-space: nowrap; }
 
 body {
 	font-size: 12px;
 	font-family: Helvetica, Arial, "san-serif"; color:rgb(72,40,62);
 	background-color:#fefefe;
-	line-height: 1.5em;
-}
-
-code {
-	background-color:#EBE7F3;
+	line-height: 1.5;
 }
 
 #main {
@@ -107,10 +115,6 @@ code {
 	-webkit-border-radius: 4px;
 }
 
-p {
-  font-size:1em;
-  margin: 1.5em 0 0 0;
-}
 
 .report {display:block;}
 .report_list .report {margin:1.5em; width:480px;}
