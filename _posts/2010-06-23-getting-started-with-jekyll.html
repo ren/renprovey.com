@@ -1,0 +1,72 @@
+---
+layout: default
+title: "Getting Started with Jekyll"
+categories: jekyll
+published: true
+synopsis: "A brief introduction and set of resources for getting started with Jekyll."
+---
+
+<section class="callout">
+  <h1>{{page.title}}</h1>
+  <p>In rebuilding this site I made the move to <a href="http://github.com/mojombo/jekyll">Jekyll</a>, an excellent static site generator.  Everything went swimmingly when I found what I was looking for, but the finding seemed a bit more difficult than I expected.  Maybe I missed a key resource, but I'll outline what I did to hopefully save someone a bit of time. You can also <a href="http://github.com/ren/renprovey.com">browse this site's repository</a> and <a href="http://wiki.github.com/mojombo/jekyll/sites">others</a> for more examples.</p>
+
+  <h2>Getting Started</h2>
+  <p>A few things to note, Jekyll gives the following special consideration:
+    <ul>
+      <li><code>_config.yml</code> &mdash; file, stores site settings, you can see mine <a href="http://github.com/ren/renprovey.com/blob/master/_config.yml">here</a>, and all options in the <a href="http://wiki.github.com/mojombo/jekyll/configuration">wiki</a>.</li>
+      <li><code>_site</code> &mdash; by default this is where Jekyll generates the static version of the site, you can override this in the _config.yml</li>
+      <li><code>_posts</code> &mdash; directory, where Jekyll looks here for blog posts</li>
+      <li><code>_layouts</code> &mdash; directory, contains your layout files. </li>
+      <li><code>&#123;&#123;content&#125;&#125;</code> tag in the layout is where the main body of content from your individual pages will be inserted.</li>
+    </ul>
+  </p>
+
+  <h2>Page Settings</h2>
+  <p>At the top of each page you'll see the bits of information Jekyll uses when constructing the site, here is a sample for one of my blog posts:</p>
+
+  <code class="block">
+  ---<br/>
+  layout: default<br/>
+  title: Git<br/>
+  categories: jekyll<br/>
+  published: true<br/>
+  ---
+  </code>
+
+  <p>These should be self explanatory, but lets run through them real quick:
+    <ul>
+      <li><code>layout</code> should correspond to a file in _layouts and is required for any file that is going to be generated using a template,</li>
+      <li><code>title</code> blog post title,</li>
+      <li><code>categories</code> blog post categories,</li>
+      <li><code>published</code> a boolean, regarding weather to publish the post.</li>
+    </ul>
+  </p>
+
+  <p>You can also add custom attributes here, which you can call from the template using &#123;&#123;page.attribute_name&#125;&#125;</p>
+
+  <h2>Iterating Over Posts</h2>
+
+  <p>In my <a href="http://github.com/ren/renprovey.com/blob/master/index.html">index.html</a> file, I have:</p>
+
+  <code class="block">
+    &#123;% for post in site.posts limit:5 %&#125;<br/>
+    &#123;&#123; post.content &#125;&#125;<br/>
+    &#123;% endfor %&#125;
+  </code>
+
+  <p>You can add more advanced options in the <a href="http://wiki.github.com/mojombo/jekyll/template-data">wiki</a>. See the Pagination along with the Post sections for respective information.</p>
+
+  <h2>Setting Your Permalink Style</h2>
+  <p>You'll on the bottom of each of <a href="http://github.com/ren/renprovey.com/tree/master/_posts/">my post pages</a>, you'll notice a call to {post.url}.  This is generated form a combination of two factors.  Jekyll can parse the date of the post from its file name, you'll notice anything in my _posts directory is named in the DD-MM-YYYY-post_title.html format. In my <a href="http://github.com/ren/renprovey.com/blob/master/_config.yml">_config.yml</a> file you'll see a line similar to:<br/>
+    <code class="block">permalink: /blog/:year/:month/:day/:title</code>
+  </p>
+
+  <p>Jekyll will parse this information out of the filename when creating the permalinks and blog directory.</p>
+
+  <h2>Other Resources:</h2>
+  <ul>
+    <li><a href="http://github.com/mojombo/jekyll">Jekyll on GitHub</a></li>
+    <li><a href="http://wiki.github.com/mojombo/jekyll">Jekyll Wiki</a></li>
+  </ul>
+  <a href="{{ page.url }}" class="permalink">{{ page.date | date: "%B %d %Y" }}</a>
+</section>
