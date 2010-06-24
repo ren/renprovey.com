@@ -1,0 +1,24 @@
+---
+layout: default
+title: Git
+categories: git
+published: true
+---
+
+<section class="callout">
+  <h1>Git Blame</h1>
+  <p>
+    <code>$ git blame -L start_line,end_line file</code> &mdash; <br/>
+    <code>$ git blame -L start_line,+5 file</code> &mdash; you can specify prev / more lines<br/>
+    <code>$ git blame -L "/regex/",+5 file</code> &mdash; you can use regex, you can optionally pass in a commit hash id before the file name
+  </p>
+  
+  <h1>Git Revert</h1>
+  <p>
+    <code>$ git revert </code> &mdash; rolls back the previous commit, committing immediately<br/>
+    <code>$ git revert -n HEAD</code> &mdash; roll back without committing<br/>
+    <code>$ git blame -L "/regex/",+5 file</code> &mdash; you can use regex, you can optionally pass in a commit hash id before the file name
+  </p>
+  
+  <a href="{{ page.url }}" class="permalink">{{ page.date | date: "%B %d %Y" }}</a>
+</section>
