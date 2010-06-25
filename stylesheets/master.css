@@ -1,5 +1,12 @@
 @import url(reset.css);
 
+body {
+	font-size: 12px;
+	font-family: Helvetica, Arial, "san-serif"; color:rgb(72,40,62);
+	background-color:#fefefe;
+	line-height: 1.5;
+}
+
 h1 {
 	font-weight:normal;
 	font-family:"droid-sans-1","droid-sans-2";
@@ -38,11 +45,17 @@ p {
 .book-title { font-style:italic; }
 .no-break { white-space: nowrap; }
 
-body {
-	font-size: 12px;
-	font-family: Helvetica, Arial, "san-serif"; color:rgb(72,40,62);
-	background-color:#fefefe;
-	line-height: 1.5;
+.single-container {
+	display:block;
+	background-color:#eee;
+	-webkit-border-radius: 4px;
+}
+
+.single-container li {
+	display:block;
+	padding:none;
+	background-color: none;
+	-webkit-border-radius: none;
 }
 
 #main {
