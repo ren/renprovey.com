@@ -1,0 +1,21 @@
+---
+layout: default
+title: Git Rebase
+categories: git
+published: true
+---
+
+<section class="callout">
+  <h1>Git Rebase</h1>
+
+  <p>
+    <code>$ git rebase -i HEAD~5</code> &mdash; Interactive rebase of the last 5 commits.  The sweet thing here is you can clean up a commit history.  You can also pass in a tag or hash range.<br/>
+		<code>$ git rebase --continue</code> &mdash; If you have to drop out of the rebase to resolve a conflict, after you add the merged file(s), this is how to start it up again.<br/>
+		<code>$ git rebase --abort</code> &mdash; Forget this.
+  </p>  
+
+  <a href="{{ page.url }}" class="permalink">{{ page.date | date: "%B %d %Y" }}</a>
+</section>
+
+
+
