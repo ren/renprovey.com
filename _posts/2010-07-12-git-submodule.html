@@ -1,0 +1,27 @@
+---
+layout: default
+title: Git Submodules
+categories: git
+published: true
+---
+
+<section class="callout">
+  <h1>Git Submodule</h1>
+
+  <p>
+  	<code>$ git submodule</code> &mdash; List your submodules, a - before the hash indicates the submodule is not initialized<br/>
+		<code>$ git submodule add &lt;git repository&gt; &lt;target directory&gt;</code> &mdash; Let your project know about the submodule and where it will go<br/>
+		<code>$ git submodule init &lt;target directory&gt;</code> &mdash; Initialize the submodule (this will add an entry to your .git/config file)<br/>
+		<code>$ git submodule update &lt;target directory&gt;</code> &mdash; Pull in the contents of the submodule.  This command is destructive.<br/>
+  </p>  
+
+  <p>The trick here is that a Git Submodule only tracks the revision from when it was added, not the latest version of whatever that submodule contains. To update a submodule:<br/><br/>
+    <code>$ cd &lt;target directory&gt;</code><br/>
+    <code>$ git checkout HEAD</code> &mdash; The can be any revision, not necessarily HEAD.<br/>
+    <code>$ git add &lt;target directory&gt;</code><br/>
+    <code>$ git commit -m "UPDATED: Submodule..."</code><br/>
+    
+    </p>
+
+  <a href="{{ page.url }}" class="permalink">{{ page.date | date: "%B %d %Y" }}</a>
+</section>
