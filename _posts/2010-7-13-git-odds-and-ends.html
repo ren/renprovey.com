@@ -1,0 +1,18 @@
+---
+layout: default
+title: Git Odds and Ends
+categories: git
+published: true
+---
+
+<section class="callout">
+  <h1>Git Odds and Ends</h1>
+
+  <p>
+  	<code>$ git gc</code> &mdash; Internally optimizes the way Git stores its history, the <code>--aggressive</code> parameter takes things one step further by recalculating the deltas from scratch.<br/>
+		<code>$ git archive --format=&lt;zip or tar&gt; --prefix=&lt;prefix&gt;/ HEAD > filename.zip</code> &mdash; Valid format types are tar and zip.<br/>
+		<code>$ git archive --format=tar --prefix=&lt;prefix&gt;/ &lt;HEAD, commit hash, branch, or tag&gt; | gzip > filename.tar.gz</code> &mdash; Pipe into gzip<br/>
+  </p>
+
+  <a href="{{ page.url }}" class="permalink">{{ page.date | date: "%B %d %Y" }}</a>
+</section>
