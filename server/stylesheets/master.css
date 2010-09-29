@@ -26,13 +26,14 @@ a:hover {
 
 b { 
 	font-weight:normal; 
-	background-color:#E1DCE6; 
+	background-color:#EBE7F3; 
 	padding:0 1px; 
 	-webkit-border-radius: 1px 2px;
 }
 
 code {
-	background-color:#E1DCE6;
+	background-color:#EBE7F3;
+	white-space: nowrap;
 }
 
 p {
@@ -41,8 +42,6 @@ p {
 }
 
 .block { display:block; }
-.left { float:left; }
-.right { float:right; }
 .book-title { font-style:italic; }
 .no-break { white-space: nowrap; }
 
@@ -59,15 +58,8 @@ p {
 	-webkit-border-radius: none;
 }
 
-header h1 {
-	float:right;
-	width:400px;
-	margin:0 0 2em 0;
-}
-
 #main {
 	display:block;
-	clear:both;
 	width:960px; 
 	margin:10em auto;
 }
@@ -88,7 +80,7 @@ header h1 {
 	display:block;
 	margin-top:10px;
 	padding:5px 0 0 0;
-	border-top:1px solid silver;
+	border-top:1px solid #e0e0e0;
 	text-align:right;
 }
 
@@ -116,23 +108,23 @@ header h1 {
 }
 
 #main > aside div {
+	-webkit-column-count: 2;
+	-webkit-column-gap: 3em;
+
+	-moz-column-count: 2;
+	-moz-column-gap: 3em;
 }
 
-#main > aside div.left, #main > aside div.right {
-	width:49%;
-}
-
-#main > aside div ul {
+#main > aside ul {
 	display:block;
-	margin-left:0;
 /*	-webkit-column-break-before: always;*/
 }
 
-#main > aside ul li, #main > aside .contact {
+#main > aside ul li {
 	display:block;
 	margin:1em 0;
 	padding:.5em 1em;
-	background-color:#cecece;
+	background-color:#eee;
 	-webkit-border-radius: 4px;
 }
 

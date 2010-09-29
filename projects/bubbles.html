@@ -1,0 +1,122 @@
+<!--
+---
+# layout: default
+# title: Home Design
+# categories: architecture
+# published: true
+---
+-->
+
+<link rel="stylesheet" href="arch_project.css" type="text/css" media="screen" title="no title" charset="utf-8">
+
+<script src="./underscore.js"></script>
+
+<section class="callout">
+  <canvas id="c" width="1200" height="600">bob</canvas>
+</section>
+
+<form id="add-room" action="#add_room" method="get" accept-charset="utf-8">
+  <label for="label">Label</label>
+  <input type="text" name="label" value="" id="label"/>
+
+  <label for="size">Size</label>
+  <input type="text" name="size" value="" id="size"/>
+
+  <button type="submit">Add Room &raquo;</button>
+</form>
+
+<form id="load-file" action="#load_file" method="get" accept-charset="utf-8">
+  <label for="file">File</label><input type="file" name="file" value="" id="file">
+  <button type="submit">Load File &raquo;</button>
+</form>
+
+<!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script>!window.jQuery && document.write('<script src="jquery-1.4.2.min.js"><\/script>')</script>
+
+
+<script type="application/javascript">
+  var scale = 3; //This is the denominator, eg. 2 is 1/2
+
+  var rooms = [];
+
+  var canvas = document.getElementById("c");
+  var ctx = canvas.getContext("2d");
+  
+  function Room(options) {
+    if (! (this instanceof arguments.callee)) {
+      return new arguments.callee(arguments);
+    }
+  
+    var self = this;
+    
+    self.settings = {
+      size: parseInt(options.size) || 100,
+      x_coord: parseInt(options.x_coord) || 100,
+      y_coord: parseInt(options.y_coord) || 200,
+      fill: options.fill || "#444",
+      label: options.label || "Unlabeled"
+    };
+
+    self.init();
+    rooms.push(self);
+  };
+  
+  Room.prototype.init = function() {
+  	var self = this;
+
+    self.getNextAvailablePosition();
+
+    ctx.globalAlpha = 0.8;
+    ctx.globalCompositeOperation = 'xor';
+
+    ctx.beginPath();
+    ctx.arc(self.settings.x_coord, self.settings.y_coord, self.settings.size/scale, 0, Math.PI * 2, false);
+    ctx.closePath();
+
+    ctx.fillStyle = self.settings.fill;
+    ctx.fill();
+    
+    // ctx.globalAlpha = 0.5;
+    ctx.strokeStyle = "#111";
+    ctx.lineWidth = self.settings.size/15;
+    ctx.stroke();
+
+    ctx.globalAlpha = 1.0;
+    ctx.font = 36/scale + 'px sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(self.settings.label, self.settings.x_coord, self.settings.y_coord);
+  };
+  
+  Room.prototype.getNextAvailablePosition = function(){
+    var self = this;
+  
+    if (_.last(rooms) != null) {
+      var l_x_coord = _.last(rooms).settings.x_coord;
+      var l_size = _.last(rooms).settings.size;
+      self.settings.x_coord = l_x_coord + l_size/scale + l_size/5 + (self.settings.size/2)/scale + self.settings.size/5;
+    } else {
+      self.settings.x_coord = self.settings.size/scale + self.settings.size/3;
+    };
+  };
+  
+  $("#add-room").submit(function(){
+    new Room({
+      label: $("#label", this).val(),
+      size:  $("#size",  this).val()
+    });
+
+    return false;
+  });
+  
+  // $("#load-file").submit(function(){
+  //   new Room({
+  //     label: $("#label", this).val(),
+  //     size:  $("#size",  this).val()
+  //   });
+  // 
+  //   return false;
+  // });
+  
+</script>
