@@ -59,12 +59,6 @@ p {
 	-webkit-border-radius: none;
 }
 
-header h1 {
-	float:right;
-	width:400px;
-	margin:0 0 2em 0;
-}
-
 #main {
 	display:block;
 	clear:both;
@@ -74,6 +68,16 @@ header h1 {
 
 #main > section {
 	width:504px;
+}
+
+#main > header {
+	background: url('/images/no4.png') no-repeat top left;
+}
+
+#main > header h1 {
+	float:right;
+	width:400px;
+	margin:3em 0 5em 0;
 }
 
 #main > .callout {
