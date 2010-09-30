@@ -129,17 +129,16 @@ p {
 #main > aside div ul {
 	display:block;
 	margin-left:0;
-/*	-webkit-column-break-before: always;*/
+	background-color:#eee;
 }
 
-#main > aside ul li, #main > aside .contact {
+#main > aside ul li, #main > aside .contact, #main > aside div .friends {
 	display:block;
 	margin:1em 0;
 	padding:.5em 1em;
-	background-color:#cecece;
 	-webkit-border-radius: 4px;
+	background-color:#eee;
 }
-
 
 .report {display:block;}
 .report_list .report {margin:1.5em; width:480px;}
