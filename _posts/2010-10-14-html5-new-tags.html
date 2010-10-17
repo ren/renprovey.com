@@ -1,0 +1,54 @@
+---
+layout: default
+title: HTML5 head
+categories: html5
+published: true
+---
+
+<section class="callout">
+  <h1>HTML5 New Tags</h1>
+  <p>While much of the HTML5 spec seems to be centered around codifying and standardizing existing behavior (as well as how a browser should handle errors), it does add a few sweet new tags:</p>
+  <ul>
+    <li>Remember that old doctype? <code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd" OMG this/goes //ON//FOREVER//EN&gt;</code> is now simply: <code>&lt;!DOCTYPE html&gt;</code></li>
+    <li>HTML5 allows you to drop the <code>type="text/css"</code> from your CSS tags: <code>&lt;link rel="stylesheet" href="/stylesheets/master.css"&gt;</code></li>
+    <li>Same goes for the <code>type="text/javascript"</code> in your script tag. The HTML5-ized version would simply be: <code>&lt;script src="javascripts/modernizr-1.5.min.js"&gt;&lt;/script&gt;</code></li>
+  </ul>
+
+  <a href="{{ page.url }}" class="permalink">{{ page.date | date: "%B %d %Y" }}</a>
+</section>
+
+
+
+HTML5 is not just about making existing markup shorter (although it does a fair amount of that). It also defines a number of new semantic elements. The following elements are defined by the HTML5 specification:
+
+
+<article>
+<aside>
+
+<footer>
+<time>
+<mark>
+
+Lets make those &lt;div&gt; a little more semantic
+
+<hgroup> <header>
+
+<nav>
+
+<section> – a generic section of a document or application, a thematic grouping of content.  Headings are placed within sections. This site uses sections for the A website’s home page could be split into different sections for the introduction, news items, and contact information.
+
+The nav element represents a section of a page that links to other pages or to parts within the page: a section with navigation links. Not all groups of links on a page need to be in a nav element—only sections that consist of major navigation blocks are appropriate for the nav element. In particular, it is common for footers to have a short list of links to various pages of a site, such as the terms of service, home page, and copyright page. 
+
+The footer element alone is sufficient for such cases, without a nav element.
+
+The article element represents a self-contained composition in a document, page, application, or site that is intended to be independently distributable or reusable, e.g., in syndication. This could be a forum post, a magazine or newspaper article, a blog entry, a user-submitted comment, an interactive widget or gadget, or any other independent item of content.
+
+The aside element represents a section of a page that consists of content that is tangentially related to the content around the aside element, and that could be considered separate from that content. Such sections are often represented as sidebars in printed typography. The element can be used for typographical effects like pull quotes or sidebars, for advertising, for groups of nav elements, and for other content that is considered separate from the main content of the page.
+
+The hgroup element represents the heading of a section. The element is used to group a set of h1–h6 elements when the heading has multiple levels, such as subheadings, alternative titles, or taglines.
+
+The header element represents a group of introductory or navigational aids. A header element is usually intended to contain the section’s heading (an h1–h6 element or an hgroup element), but this is not required. The header element can also be used to wrap a section’s table of contents, a search form, or any relevant logos.
+
+The footer element represents a footer for its nearest ancestor sectioning content or sectioning root element. A footer typically contains information about its section such as who wrote it, links to related documents, copyright data, and the like. Footers don’t necessarily have to appear at the end of a section, though they usually do. When the footer element contains entire sections, they represent appendixes, indexes, long colophons, verbose license agreements, and other such content.
+The time element represents either a time on a 24-hour clock or a precise date in the proleptic Gregorian calendar, optionally with a time and a timezone offset.
+The mark element represents a run of text in one document marked or highlighted for reference purposes.
