@@ -33,16 +33,23 @@
       </header>
 			<aside>
 				<div class="left">
+					<h2>HTML5 Series</h2>
+					<ul class="single-container">
+						{% for post in site.categories.html5 reversed limit:15 %}
+              <li><a href="{{post.url}}">{{post.title}}</a> &mdash; {{post.synopsis}}</li>
+            {% endfor %}
+					</ul>
+
 					<h2>Jekyll Series</h2>
 					<ul class="single-container">
-						{% for post in site.categories.jekyll limit:15 %}
+						{% for post in site.categories.jekyll reversed limit:15 %}
               <li><a href="{{post.url}}">{{post.title}}</a> &mdash; {{post.synopsis}}</li>
             {% endfor %}
 					</ul>
 					
 					<h2>Git Series</h2>
 					<ul class="single-container">
-					{% for post in site.categories.git limit:15 %}
+					{% for post in site.categories.git reversed limit:15 %}
             <li><a href="{{post.url}}">{{ post.title }}</a></li>
           {% endfor %}
 					</ul>
