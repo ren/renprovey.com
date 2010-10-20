@@ -1,0 +1,38 @@
+---
+layout: default
+title: AV Club &mdash; HTML5's New Audio and Video Tags
+categories: html5
+published: true
+---
+
+<section class="callout">
+  <h1>AV Club &mdash; HTML5's New Audio and Video Tags</h1>
+  <p>They have been a long time coming, but HTML5 will finally introduce native, standardized playback with all the accompanying JavaScript support.</p>
+
+  <h2>HTML5 Audio Tag</h2>
+  <p><code>&lt;audio src="happyhappyjoyjoy.mp3" controls&gt;&lt;/audio&gt;</code> &mdash; Like many HTML5 tag attributes, by simply being there, <code>controls</code> is true. Something like controls="false" would still display controls (we're looking at if the attribute exists, not what it is set to).  If you don't want them, just leave <code>controls</code> out.</p>
+  <p>The <code>preload</code> attribute can be set to one of the following:
+    <ul>
+      <li><code>none</code> &mdash; don't preload until specifically asked,</li>
+      <li><code>auto</code> &mdash; preload as much as possible,</li>
+      <li>or <code>metadata</code> &mdash; (default) load metadata and first frame of video.</li>
+    </ul>
+  </p>
+  <p>Other attributes are <code>autoplay</code> and <code>loop</code>.  For obvious reasons, never tell anyone that either of those exist.</p>
+  <p><code>&lt;audio&gt;</code> also has a long form for specifying fallbacks when an audio format is not supported:<br/><br/>
+  <code>&lt;audio controls preload="none"&gt;<br/>
+  &nbsp;&nbsp;&lt;source src="happyhappyjoyjoy.mp3"&gt;<br/>
+  &nbsp;&nbsp;&lt;source src="happyhappyjoyjoy.ogg"&gt;<br/>
+  &lt;/audio&gt;</code>
+  <p>At this point in the discussion, <a class="book-title" href="http://books.alistapart.com/products/html5-for-web-designers">HTML5 For Web Designers</a> author, Jeremy Keith, has a cheeky little bit about OGG not being "crippled" by software patents, so I'll add a cheeky little link <a href="http://daringfireball.net/2007/04/wee_bit_more_on_aac">here</a>.  Good luck finding the comments section!</p>
+  
+  <h2>HTML5 Video Tag</h2>
+  <p>Video is very similar with a few extra helpful attributes:<br/><code>&lt;video src="happyhappyjoyjoy.mp4" controls width="300" height="200" poster="placeholder.png"&gt;&lt;/video&gt;</code> &mdash; all those should be self explanatory, <code>poster</code> is what allows you to specify a placeholder image.</p>
+  
+  <code>&lt;video controls width="300" height="200" poster="placeholder.png"&gt;<br/>
+  &nbsp;&nbsp;&lt;source src="happyhappyjoyjoy.mp3"&gt;<br/>
+  &nbsp;&nbsp;&lt;source src="happyhappyjoyjoy.ogg"&gt;<br/>
+  &lt;/audio&gt;</code>
+
+  <a href="{{ page.url }}" class="permalink">{{ page.date | date: "%B %d %Y" }}</a>
+</section>
