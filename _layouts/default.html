@@ -2,7 +2,10 @@
 <html>
   <head>
     <title>Ren Provey</title>
+		<link rel="stylesheet" href="/stylesheets/reset.css" type="text/css">
+		<link rel="stylesheet" href="/stylesheets/960.css" type="text/css">
 		<link rel="stylesheet" href="/stylesheets/master.css" type="text/css">
+		<link rel="stylesheet" href="/stylesheets/text.css" type="text/css">
 		
 		<meta name="author" content="Ren Provey" />
     <link href="http://feeds.feedburner.com/renprovey" rel="alternate" title="Ren Provey" type="application/atom+xml" />
@@ -11,36 +14,39 @@
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   </head>
 	<body class="<%= controller_name -%> <%= controller.action_name -%>">
-		<section id="main">
-			<aside>
-				<h1>Hello, my name is <b>Ren Provey</b>.<br/> I am a ux/ui <b>designer</b><br/> and <b>technologist</b> interested in marrying architecture, design,<br/> and technology.</h1>
-				<div>
-					<h2>Jekyll Series</h2>
-					<ul class="single-container">
-						{% for post in site.categories.jekyll limit:15 %}
-              <li><a href="{{post.url}}">{{post.title}}</a> &mdash; {{post.synopsis}}</li>
-            {% endfor %}
-					</ul>
-					
-					<h2>Git Series</h2>
-					<ul class="single-container">
-					{% for post in site.categories.git limit:15 %}
-            <li><a href="{{post.url}}">{{ post.title }}</a></li>
-          {% endfor %}
-					</ul>
-
-					<p>
-					  <strong>Around the Web</strong><br/>
-            Twitter: <a href="http://twitter.com/renprovey">@renprovey</a><br/>
-            LinkedIn: <a href="http://www.linkedin.com/in/renprovey">Ren Provey</a><br/>
-            GitHub: <a href="http://github.com/ren">ren</a><br/>
-            Work: <a href="http://signalengine.com/">SignalEngine</a><br/>
-					</p>
-					<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-				</div>
-			</aside>
+	<div class="container_12">
+		<header>
+  		<h1 class="grid_4 prefix_7 suffix_1 clearfix">Hello, my name is <b>Ren Provey</b>.<br/> I am a ux/ui <b>designer</b><br/> and <b>technologist</b> interested in marrying architecture, design,<br/> and technology.</h1>
+  	</header>
+  	
+  	<section class="grid_7 alpha">
 			{{ content }}
 		</section>
+  	
+		<section class="grid_5 omega">
+			<h2>Jekyll Series</h2>
+			<ul>
+				{% for post in site.categories.jekyll limit:15 %}
+          <li><a href="{{post.url}}">{{post.title}}</a> &mdash; {{post.synopsis}}</li>
+        {% endfor %}
+			</ul>
+		
+			<h2>Git Series</h2>
+			<ul class="single-container">
+			{% for post in site.categories.git limit:15 %}
+        <li><a href="{{post.url}}">{{ post.title }}</a></li>
+      {% endfor %}
+			</ul>
+
+			<p>
+			  <strong>Around the Web</strong><br/>
+        Twitter: <a href="http://twitter.com/renprovey">@renprovey</a><br/>
+        LinkedIn: <a href="http://www.linkedin.com/in/renprovey">Ren Provey</a><br/>
+        GitHub: <a href="http://github.com/ren">ren</a><br/>
+        Work: <a href="http://signalengine.com/">SignalEngine</a><br/>
+			</p>
+		</section>
+	</div>
 		
 		<script type="text/javascript">
 		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
