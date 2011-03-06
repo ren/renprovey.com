@@ -1,8 +1,14 @@
-body{font:13px/1.5 'Helvetica Neue',Arial,'Liberation Sans',FreeSans,sans-serif}a:focus{outline:1px dotted}
+body{
+	background-color: #FEFEFE;
+	color: #48283E;
+	font-family: Helvetica, Arial, san-serif;
+	font-size: 12px;
+	line-height: 1.5;
+}
+
+a:focus{outline:1px dotted}
 hr{border:0 #ccc solid;border-top-width:1px;clear:both;height:0}
 
-h1{font-size:25px}
-h2{font-size:23px}
 h3{font-size:21px}
 h4{font-size:19px}
 h5{font-size:17px}
@@ -13,3 +19,58 @@ ul{list-style:disc}
 li{margin-left:30px}
 
 p,dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset,figure{margin-bottom:20px}
+
+h1, h2, h3 {
+	font-weight:normal;
+	font-family:"droid-sans-1","droid-sans-2";
+}
+
+h1 {
+	font-size:25px;
+	line-height:1.5;
+}
+
+h2 {
+	font-size:23px;
+	line-height:1.5;
+}
+
+#series h2 {
+	font-size:16px;
+	margin-bottom:5px;
+}
+
+article h1 {
+	font-size:14px;
+}
+
+article h2 {
+	font-family: Helvetica, Arial, san-serif;
+	font-size:13px;
+	font-weight:bold;
+}
+
+a {
+	color:rgb(95,101, 72);
+	text-decoration: none;
+}
+
+a:hover {
+	color:rgb(152,64,8);
+}
+
+b { 
+	font-weight:normal; 
+	background-color:#E1DCE6; 
+	padding:0 1px; 
+	-webkit-border-radius: 1px 2px;
+}
+
+code {
+	background-color:#E1DCE6;
+}
+
+p {
+  font-size:1em;
+  margin: 1.5em 0;
+}

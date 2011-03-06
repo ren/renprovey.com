@@ -1,85 +1,39 @@
-h1 {
-	font-weight:normal;
-	font-family:"droid-sans-1","droid-sans-2";
-	line-height:1.3;
-	margin-bottom:1em;
-}
-
-a {
-	color:rgb(95,101, 72);
-	text-decoration: none;
-}
-
-a:hover {
-	color:rgb(152,64,8);
-}
-
-b { 
-	font-weight:normal; 
-	background-color:#E1DCE6; 
-	padding:0 1px; 
-	-webkit-border-radius: 1px 2px;
-}
-
-code {
-	background-color:#E1DCE6;
-}
-
-p {
-  font-size:1em;
-  margin: 1.5em 0;
-}
-
 .block { display:block; }
 .left { float:left; }
 .right { float:right; }
 .book-title { font-style:italic; }
 .no-break { white-space: nowrap; }
 
-.single-container {
-	display:block;
-	background-color:#eee;
-	-webkit-border-radius: 4px;
-}
-
-.single-container li {
-	display:block;
-	padding:none;
-	background-color: none;
-	-webkit-border-radius: none;
-}
-
-<<<<<<< HEAD
-#main {
-	display:block;
-	clear:both;
-	width:960px; 
-	margin:10em auto;
-}
-
-#main > section {
-	width:504px;
-}
-
-#main > header {
+header {
+	margin-top:100px;
+	min-height:350px;
 	background: url('/images/no4.png') no-repeat top left;
 }
 
-#main > header h1 {
-	float:right;
-	width:400px;
-	margin:3em 0 5em 0;
-}
+header h1 {margin-top:50px;}
 
-#main > .callout {
+#series ul {
 	display:block;
-	margin:1em 0;
-	padding:.5em 1em;
+	margin-left:0;
 	background-color:#eee;
 	-webkit-border-radius: 4px;
 }
 
-#main > .callout .permalink {
+#series ul li {
+	display:block;
+	margin:1em 0;
+	padding:.5em 1em;
+}
+
+article {
+	display:block;
+	margin:1em 0;
+	padding:2em 1em 1em 1em;
+	background-color:#eee;
+	-webkit-border-radius: 4px;
+}
+
+article .permalink {
 	display:block;
 	margin-top:10px;
 	padding:5px 0 0 0;
@@ -87,14 +41,12 @@ p {
 	text-align:right;
 }
 
-#main > .callout h1 {
-	font-size:1.2em;
-	margin:1em 0 .8em 0;
-}
-
-#main > .callout .date {
+article .date {
 	margin-top:10px;
 }
+
+
+
 
 #main > aside {
 	margin:0 0 0 3em;
@@ -108,26 +60,8 @@ p {
 }
 
 
-#main > aside div {
-}
 
-#main > aside div.left, #main > aside div.right {
-	width:46%;
-}
 
-#main > aside ul {
-	display:block;
-	margin-left:0;
-	background-color:#eee;
-}
-
-#main > aside ul li, #main > aside .contact, #main > aside div .friends {
-	display:block;
-	margin:1em 0;
-	padding:.5em 1em;
-	-webkit-border-radius: 4px;
-	background-color:#eee;
-}
 
 .report {display:block;}
 .report_list .report {margin:1.5em; width:480px;}
