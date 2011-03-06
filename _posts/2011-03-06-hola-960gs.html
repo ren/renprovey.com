@@ -1,0 +1,25 @@
+---
+layout: default
+title: Hola 960.gs
+categories: gs
+published: true
+synopsis: "960.gs Primer."
+---
+
+<article>
+  <h1>Hola 960.gs</h1>
+
+  <p>"The premise of the system is ideally suited to rapid prototyping, but it would work equally well when integrated into a production environment. There are printable sketch sheets, design layouts, and a CSS file that have identical measurements." - http://960.gs/</p>
+
+  <p>What the hey? Sounds good enough to me, lets give it a whirl. Since this site is heavily gridded, I decided to convert it.</p>
+
+  <p>For starters I added the following a wrapping div <code>&lt;div class="container_12"&gt;</code>, you could go with 16 column grid: <code>&lt;div class="container_16"&gt;</code> and was in business.</p>
+  
+  <p>Basically, moving items about the grid, is dead simple, above is my introduction:<br> <code>&lt;h1 class="grid_5 prefix_7 clearfix"&gt;Hello, my name is ... and technology.&lt;/h1&gt;</code>.</p>
+  
+  <p>The class <code>grid_5</code> places the element across 5 elements of the grid. I added a class of <code>prefix_7</code>, which shifts the element to the right by 7 grid columns.</p>
+
+  <p>By using the <code>grid</code>, <code>prefix</code> <code>suffix</code>, classes you can position elements about the grid. The last bit to remember is that if a continer has a grid within it, attach a class of <code>alpha</code> and <code>omega</code> to the last.</p>
+
+  <a href="{{ page.url }}" class="permalink">{{ page.date | date: "%B %d %Y" }}</a>
+</article>
