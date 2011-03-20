@@ -44,9 +44,16 @@
 		</section>
   	
 		<section class="grid_3" id="series">
-		  <h2>960.gs Series</h2>
+     <h2>RSpec2 Series</h2>
 			<ul>
-				{% for post in site.categories.gs reversed limit:15 %}
+				{% for post in site.categories.rspec reversed limit:5 %}
+          <li><a href="{{post.url}}">{{post.title}}</a> &mdash; {{post.synopsis}}</li>
+        {% endfor %}
+			</ul>
+
+    <h2>960.gs Series</h2>
+			<ul>
+				{% for post in site.categories.gs reversed limit:5 %}
           <li><a href="{{post.url}}">{{post.title}}</a> &mdash; {{post.synopsis}}</li>
         {% endfor %}
 			</ul>

@@ -1,0 +1,46 @@
+---
+layout: default
+title: RCov & RSpec2 Integration
+categories: rspec
+published: true
+synopsis: "RSpec2, RCov, Ruby 1.9.2 (almost) integration."
+---
+
+<article>
+  <h1>RCov & RSpec2 Integration: Curiously Hard To Find Definitive Information</h1>
+
+  <p>Friday at work, I set about adding RCov integration to our project's RSpec and Cucumber tests.  The task got thwarted by a seemingly lack of information, but after seeing the <a href="http://www.chambermagic.com/">Millionaire's Magician</a> last night, I regained a sense of hope for the impossible.  This morning I set out on a quest, which went as follows.</p>
+
+  <p>My first stop was the latest edition of <a href="http://www.pragprog.com/titles/achbd/the-rspec-book">The RSpec Book</a>.  Feeling elated when a search of the text turned up this snippet:</p>
+  <code>
+  require 'rspec/core/rake_task'<br/><br/>
+
+  namespace :spec do<br/>
+    desc "Run specs with RCov"<br/>
+    RSpec::Core::RakeTask.new('rcov') do |t|<br/>
+      t.spec_files = FileList['spec/**/*_spec.rb']<br/>
+      t.rcov = true<br/>
+      t.rcov_opts = ['--exclude', '\/Library\/Ruby']<br/>
+    end<br/>
+  end<br/>
+  </code>
+
+  <p>I quickly set about adding the above to my <code>Rakefile</code>.  Ready for wheels up, I ran <code>rake spec:rcov</code> and was greeted with the following:<br/><code>undefined method `spec_files=' for #&lt;RSpec::Core::RakeTask:0x00000101550aa8&gt;</code></p>
+
+  <p>Googling around I came across Alex Blab's excellent <a href="http://pivotallabs.com/users/alex/blog/articles/1451-upgrading-your-rakefile-from-rspec-1-3-to-rspec-2">Upgrading your Rakefile from RSpec 1.3 to RSpec 2</a>, I wish this link had some more Google juice.  And after some fiddling, ended up with this in my <code>Rakefile</code>:</p>
+  <code>
+  require 'rspec/core/rake_task'<br/><br/>
+
+  namespace :spec do<br/>
+    desc "Run specs with RCov"<br/>
+    RSpec::Core::RakeTask.new('rcov') do |spec|<br/>
+      spec.pattern = 'spec/**/*_spec.rb'<br/>
+      spec.rspec_opts = ['--backtrace']<br/>
+    end<br/>
+  end<br/>
+  </code>
+
+  <p>If you're running Ruby 1.8.7, I'd try keeping <code>t.rcov = true</code> in your block, it was causing a ASCII error that may have been 1.9.2 specific. Anyway, the above, isn't perfect by any stretch of the imagination, but hopefully it'll be a good launch point for others. Please let me know if you can improve on it.</p>
+
+  <a href="{{ page.url }}" class="permalink">{{ page.date | date: "%B %d %Y" }}</a>
+</article>
