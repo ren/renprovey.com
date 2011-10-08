@@ -33,6 +33,10 @@ article {
 	-webkit-border-radius: 4px;
 }
 
+article blockquote {
+  margin:0 3em;
+}
+
 article .permalink {
 	display:block;
 	margin-top:10px;
