@@ -1,0 +1,30 @@
+---
+layout: default
+title: "Cloud Coding"
+categories: notes
+published: true
+synopsis: Coding in the cloud from your trusty iPad.
+---
+
+<article>
+  <h1>Cloud Coding</h1>
+
+  <p>After reading Mark O'Connor's <a href="http://yieldthought.com/post/12239282034/swapped-my-macbook-for-an-ipad">post</a> about swapping his MacBook for an iPad+Linode, I decided to give the setup a whirl.  For reasons that probably defy logic (what can I say, I'm a slave to fashion), I substituted Panic's <a href="http://panic.com/prompt">Prompt</a> for the recommended <a href="http://www.zinger-soft.com/iSSH_features.html">iSSH</a> and have yet to feel any pain from the decision.</p>
+
+  <p>Mark covers a lot of the setup for a Linode server in his <a href="http://yieldthought.com/post/12638596672/setting-up-an-ipad-linode">follow-up post</a>.  For now, I am just SSHing to my home machine via <a href="http://no-ip.com">no-ip.com</a>, and the only real fiddly bit that I needed to add was the following in my vimrc:</p>
+
+  <code>
+    if has('gui_running')<br/>
+      &nbsp;&nbsp;set background=light<br/>
+    else<br/>
+      &nbsp;&nbsp;let g:solarized_termcolors=256<br/>
+      &nbsp;&nbsp;set background=dark<br/>
+    endif<br/>
+  </code>
+
+  <p>The key thing here is to force solarized to use the <code>let g:solarized_termcolors=256</code> even if vim is running in a terminal.  Panic's Prompt by default will register itself as a 16 color terminal, to get 256 colors working (and the beautiful <a href="http://ethanschoonover.com/solarized">Solarized</a> color scheme), I added <code>export TERM=xterm-256color</code> to the login script which can be configured in Prompt's individual machine settings.</p>
+
+  <p>We'll see how the setup works out, for now it is nice to just be traveling around with only an iPad.</p>
+
+  <a href="{{ page.url }}" class="permalink">{{ page.date | date: "%B %d %Y" }}</a>
+</article>
