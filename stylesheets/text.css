@@ -30,14 +30,10 @@ h1 {
 	line-height:1.5;
 }
 
-h2 {
-	font-size:23px;
-	line-height:1.5;
-}
-
-#series h2 {
+h2, h3 {
 	font-size:16px;
 	margin-bottom:5px;
+  line-height:1.5;
 }
 
 article h1 {
