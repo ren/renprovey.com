@@ -9,7 +9,8 @@ synopsis: "PostgreSQL hstore resources"
 <article>
   <h1>hstore You Just Might Enjoy Shopping There</h1>
 
-  <p>At <a href='http://seeclickfix.com/'>work</a>, I've been lucky enough to be leading the development of an entirely event driven application (more on that in the future).  I knew it would be an interesting challenge, but I didn't realize how much I'd enjoy it.  Being a bit of a green field app we're using a <a href='http://heroku.com'>number</a> of <a href='http://sidekiq.org'>technologies</a> and <a href='http://pivotaltracker.com'>services</a> that have me excited.  The piece that has really expanded my architectural thinking is PostgreSQL's <a href='http://www.postgresql.org/docs/9.0/static/hstore.html'>hstore</a>.  In hindsight that seems like a no brainer, I mean it is a fundamental shift in how you think about storing data right?</p>
+  <p>At <a href='http://seeclickfix.com/'>work</a>, I've been lucky enough to be developing an entirely event driven application (more on that in the future).  I knew it would be an interesting challenge, but I didn't realize how much I'd enjoy it.</p>
+  <p>Being a green field app, we're using a <a href='http://heroku.com'>number</a> of <a href='http://sidekiq.org'>technologies</a> and <a href='http://pivotaltracker.com'>services</a> that have me excited.  While it took me a bit of diliberation to decide on, the piece that has really surpised me and expanded my architectural thinking is PostgreSQL's <a href='http://www.postgresql.org/docs/9.0/static/hstore.html'>hstore</a>.  In hindsight the fact that hstore is allowing us the flexibility to prototype quickly, is less surprising than the fundamental shift in how I've started thinking about storing an retrieving data.</p>
 
   <p>If you're interested in checking out hstore, I recommend the following stops:</p>
 
@@ -21,15 +22,9 @@ synopsis: "PostgreSQL hstore resources"
     <li><a href='http://schneems.com/post/19298469372/you-got-nosql-in-my-postgres-using-hstore-in-rails'>You got NoSQL in my Postgres! Using Hstore in Rails</a></li>
   </ul>
 
-  <p>The one bit that took me some time to find was about getting hstore running in my Rails test environment.  Rails' default schema load doesn't enable the Postgres extension (as happens in rake db:test:prepare).  To have hstore enabled you'll need to uncomment or add the following line in <code>config/application.rb</code>:
-  <br>
-  <br>
+  <p>The one bit that took me some time to find was about getting hstore running in my Rails test environment.  Rails' default schema load doesn't enable the Postgres extension (as happens in rake db:test:prepare).  To have hstore enabled you'll need to uncomment or add the following line in <code>config/application.rb</code>:</p>
   <code>config.active_record.schema_format = :sql</code>
-  <br>
-  <br>
-
-    This will change your schema dumps from Ruby to SQL. If you're unsure about the implications of this change, you can learn more in <a href='http://guides.rubyonrails.org/migrations.html#schema-dumping-and-you'>this Rails Guide</a>.
-  </p>
+  <p>This will change your schema dumps from Ruby to SQL. If you're unsure about the implications of this change, you can learn more in <a href='http://guides.rubyonrails.org/migrations.html#schema-dumping-and-you'>this Rails Guide</a>.</p>
 
   <a href="{{ page.url }}" class="permalink">{{ page.date | date: "%B %d %Y" }}</a>
 </article>
