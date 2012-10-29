@@ -22,7 +22,7 @@ synopsis: "PostgreSQL hstore resources"
     <li><a href='http://schneems.com/post/19298469372/you-got-nosql-in-my-postgres-using-hstore-in-rails'>You got NoSQL in my Postgres! Using Hstore in Rails</a></li>
   </ul>
 
-  <p>The one bit that took me some time to find was about getting hstore running in my Rails test environment.  Rails' default schema load doesn't enable the Postgres extension (as happens in rake db:test:prepare).  To have hstore enabled you'll need to uncomment or add the following line in <code>config/application.rb</code>:</p>
+  <p>The one bit that took me some time to find was about getting hstore running in my Rails test environment.  Rails' default schema load doesn't enable the Postgres extension (as happens in <code>rake db:test:prepare</code>).  To have hstore enabled you'll need to uncomment or add the following line in <code>config/application.rb</code>:</p>
   <code>config.active_record.schema_format = :sql</code>
   <p>This will change your schema dumps from Ruby to SQL. If you're unsure about the implications of this change, you can learn more in <a href='http://guides.rubyonrails.org/migrations.html#schema-dumping-and-you'>this Rails Guide</a>.</p>
 
