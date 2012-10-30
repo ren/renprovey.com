@@ -1,0 +1,20 @@
+---
+layout: default
+title: Sidekiq ProTip #1
+categories: sidekiq
+published: true
+synopsis: "Sidekiq ProTip #1"
+---
+
+<article>
+  <h1>Sidekiq ProTip #1</h1>
+
+  <p>Is Sidekig giving you: <code>TypeError: can't dump anonymous class Class</code>? aka the most helpful error message in the world?</p>
+
+  <p>It takes some digging, but here is the deal: Sidekiq's .delay method only works with Ruby 1.9.3.  So if you're doing <code>@user.delay.some_long_running_method</code>, it'll fail unless you're on 1.9.3.  See: <a href="http://github.com/mperham/sidekiq/issues/84">Sidekiq Issue #84</a>.</p>
+
+  <a href="{{ page.url }}" class="permalink">{{ page.date | date: "%B %d %Y" }}</a>
+</article>
+
+
+
