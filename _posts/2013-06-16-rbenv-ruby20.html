@@ -1,24 +1,26 @@
 ---
 layout: default
-title: rbenv + Ruby 2.0.0, OS X
-categories: rbenv
+title: rbenv + Ruby 2.0, OS X
+categories: rbenv, protip
 published: true
-synopsis: "Getting Ruby 2.0.0 setup with rbenv on OS X"
+synopsis: "Getting Ruby 2.0 setup with rbenv on OS X"
 ---
 
 <article>
-  <h1>rbenv + Ruby 2.0.0, OS X</h1>
+  <h1>rbenv + Ruby 2.0, OS X</h1>
 
-  <p>Is rbenv install giving you an OpenSSL error?</p>
+  <p>Is rbenv giving you an OpenSSL error trying to install Ruby 2.0.0 on OS X?</p>
 
-  <p>I peiced together the simplest solution I could find:
-	  <code>brew install openssl</code>
-	  <code>export CONFIGURE_OPTS="--with-openssl-dir=`brew --prefix openssl`"</code>
-	  <code>rbenv install 2.0.0-p195</code>
+  <p>As a big fan of minimal invasiveness, I pieced together the simplest solution I could find:</p>
+	<code>
+	brew install openssl<br>
+	export CONFIGURE_OPTS="--with-openssl-dir=`brew --prefix openssl`"<br>
+	rbenv install 2.0.0-p195
+	</code>
 	  
-	  See: <a href="http://www.ruby-lang.org">ruby-lang.org</a> to make sure you're installing the current patch level.</p>
+  <p>See: <a href="http://www.ruby-lang.org">ruby-lang.org</a> to make sure you're installing the current patch level.</p>
 
-	  <p>A big thanks to <a href="http://dlackty.org/post/37810721875/switch-to-ruby-2-0-right-now-on-os-x">this post [dlackty.org]</a> for helping me avoid a mess of dated information and lib installs.</p>
+  <p>A big thanks to <a href="http://dlackty.org/post/37810721875/switch-to-ruby-2-0-right-now-on-os-x">this post [dlackty.org]</a> for helping me avoid a mess of dated information and lib installs.</p>
 
   <a href="{{ page.url }}" class="permalink">{{ page.date | date: "%B %d %Y" }}</a>
 </article>
