@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<h1>FAQ</h1>
+
+<p>Interested in buiding an app, but not sure where to start?</p>
+<p>You're not alone, running the <a href='http://nhvmobile.com'>NHV Mobile Dev Group</a>, I encounter this situation <i>a lot</i>, it is a beautiful benefit of living in an entreprenurial city.</p>
+
+<p>No matter what your background, you're going to want to find atleast one thought partner, preferably someone with enough overlapping expertise that they understand what you want to create, but also a deep level of knowledge in one of your weak areas.  A great way to think about this is a <a href='http://en.wikipedia.org/wiki/T-shaped_skills'>T-shaped</a> person with overlapping horizontal knowledge, but seperate vertical knowledge.</p>
+
+<p>Most of the people I meet are non-technical and need a technical process thought partner. What I've found is that folks who have been able to do some research before we talk, end up getting a lot more value out of a 30 or 45 minute conversation with me. The problem is, it can be hard to find good foundational material, the list below aims to help with that.</p>
+
+<h2>Process</h2>
+<p>My feeling is that regardless of an idea succeeding or failing, if you can learn good process but fail your next try will have a much better chance of success. If you can learn good process and succeed, your business will be much more innovative.</p>
+
+<p>Google Ventures has a great <a href='http://www.gv.com/lib/the-product-design-sprint-a-five-day-recipe-for-startups'>6 part series</a> how they conduct a design sprint (hint: this is a process you can use to refine a preliminary idea).</p>
+
+<p>Thoughtbot, a well known and highly respected consultancy, has also published their <a href='http://playbook.Thoughtbot.com/#product-design-sprint'>internal guide to running a product design sprint</a>. I'd strongly recommend setting aside a few good chunks of time to try and work through this design process on its own. By taking a crack at it on your own, you'll gain 3 valuable pieces of knowledge:
+<ol>
+<li>what parts you'll need more help with and how to refer to them,</li>
+<li>a refined idea to talk about,</li>
+<li>and a better understanding of the process and what you need to maximize the results of each step when you do it with a team.</li>
+<ol></p>
+
+<h2>Architecture</h2>
+<p>Ideally at the end of the design sprint, you'll be able to create an overview of what type of infastructure you'll need. Commonly, this amounts to 3 "layers".</p>
+
+<p>A storage layer (often a database), think of this a bit like a spread sheet. If you were designing a Meetup competitor, you might have a table of users, with columns like email, password, and profile. You might have another table called "Groups" which would have columns like name and description.</p>
+
+<p>An logic (application) layer, this is what handles recieving information from the presentation layer and responding to requests from the presentation layer by retrieving information from your storage layer.</p>
+
+<p>A presentation layer. This is the interface, it can come in many forms; a website, iPhone application, etc. On a simplified level, when you click a button or link, the presentation layer tells the application layer about what you've done, the application layer will then respond with to the presentation layer with instructions on what to do.</p>
+
+<p>All that is a gross oversimplification, but it will help you get a handle on the major componenets of an application that need to work together.</p>
+
+<h2>Platforms</h2>
+<p>Once you have an idea of the different components you might need, it is smart to do a little platform research. I am always impressed by someone who is able to ask me about platforms. There are a lot of competing platforms and technologies, each one will promise you the stars. Because technical people can have strong opinions, it is always useful to follow up any question about a platform with a question about how much code they've written on that platform in the past few months. You want firsthand experience from someone who recently has had to take a concept to reality.</p>
+
+<p>Thoughtbot has a great write up on the importance of choosing platforms and (more importantly) the larger thought process of why they choose specific tools, see: <a href='http://playbook.Thoughtbot.com/#choose-platforms'>http://playbook.Thoughtbot.com/#choose-platforms</a>.</p>
+
+<h2>Budget</h2>
+<p>I am often asked, "how much will it cost to do X?". An honest answer is "it depends" and really you'll need to go though a design sprint before anyone is anywhere close to not just pulling numbers out of thin air. When you've found a good developer or team, there is no reason to keep your budget a secret. There are a lot of trade-offs and your team needs that information to guide your options. This <a href='https://medium.com/what-i-learned-today/a61ec864c898'>article</a> does a great job explaining why.</p>
+
+<p>Be prepared to make initial sacrafices. I met one founder who was entering line items from photos of reciepts by hand for 30+ beta users into a Google Spreadsheet. Sure, it is a PITA, but building out the technology to automate much of that would be a significant amount of money. Plus, he was learning a lot about reciepts, which is core to his idea.</p>
+
+<p>I am a strong opponent of fixed prices, there is a great Quora article on why <a href='http://www.quora.com/Thoughtbot/How-does-Thoughtbot-deal-with-customers-who-insist-on-fix-price-proposals-when-doing-agile-work-on-an-hourly-rate-basis'>here</a>.</p>
+
+<p>On that note, estimations for building software is a bit of black magic. The best you can hope for is a consistent margin of error, what that margin of error is, will be vary depending on a host of factors. Believe it or not, most programmers are really concerned about this and have done a lot of analysis trying to understand how to make it better. A great place to start understanding the current best practices in estimation is this <a href='http://www.jamesshore.com/Agile-Book/estimating.html'>excerpt</a> from James Shore's <i>The Art of Agile Development</i>.</p>
