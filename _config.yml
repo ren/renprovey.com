@@ -10,6 +10,9 @@ maruku:
   use_divs:   false
   png_dir:    images/latex
   png_url:    /images/latex
-permalink: /:categories/:year/:month/:day/:title	
-
+permalink: /:categories/:year/:month/:day/:title
+gems:
+  - jekyll-redirect-from
+whitelist:
+  - jekyll-redirect-from
 title: "Ren Provey"
