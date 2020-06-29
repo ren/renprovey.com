@@ -21,7 +21,7 @@ github_username:  ren
 
 # Build settings
 markdown: kramdown
-plugins:
+# plugins:
   # - jekyll-feed
 
 # Exclude from processing.
